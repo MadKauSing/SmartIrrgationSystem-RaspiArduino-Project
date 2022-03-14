@@ -1,12 +1,5 @@
-import RPi.GPIO as gp
-gp.setmode(gp.BOARD)
-gp.setup(8,gp.IN)
-gp.setup(36,gp.OUT,initial=gp.LOW)
-gp.setup(32,gp.OUT,initial=gp.LOW)
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(4, GPIO.IN)
 while True:
-    try:
-        print(not gp.input(8))  
-        gp.output(36,gp.input(8))  
-        gp.output(32,not gp.input(8))   
-    except:
-        gp.cleanup()
+    print (GPIO.input(4))
