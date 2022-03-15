@@ -1,4 +1,4 @@
-// Sensor pins
+//Sensor pins
 #define sensorPower 7
 #define sensorPin A0
 
@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   //get the reading from the function below and print it
   Serial.print("Analog output: ");
-  Serial.println(readSensor());`
+  Serial.println(readSensor());
   
   delay(1000);
 }
