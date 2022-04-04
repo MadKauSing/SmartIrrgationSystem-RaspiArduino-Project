@@ -34,6 +34,6 @@ if __name__ == '__main__':
     print("\tlight","\tsoil")
     while True:
         light,soil=readSerial()
-        print("\t",light,|"\t",soil)
+        print("\t",light,"\t",soil)
     
        
