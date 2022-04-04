@@ -18,7 +18,7 @@ def readSerial():
             x,value=line
             if x=="S:":
                 ans.append(value)
-            if x=="L:"
+            if x=="L:":
                 ans=[value]+ans
     print(ans)
             
