@@ -17,7 +17,7 @@ class MoistureSensor():
 
 
 
-if __name__="__main__":
+if __name__=="__main__":
     sensor=MoistureSensor(17)
     while True:
     
