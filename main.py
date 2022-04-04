@@ -10,8 +10,13 @@ import time
 
 #main loop that runs in the background
 while True:
-    light,soil=readSerial.readSerial();
+    light,soilmoisture=readSerial.readSerial();
 
     moistureSensor=moist.MoistureSensor(17);
     ultraSensor=ultrasonic_distance.UltrasonicSensor(18,14)
     
+    humidity,temperature=moistureSensor.get()
+    height=ultraSensor.distance()
+    
+    dataDump.writeValues(temperature,soilmoisture,humidity,light,height)
+    time.sleep(1000);
