@@ -28,12 +28,12 @@ def readSerial():
             if x=="L:" and flag==1:
                 ans=[value]+ans
                 flag=0
-    print(ans)
+    return ans
             
-
-
-
 if __name__ == '__main__':
-    readSerial()
-
+    print("\tlight","\tsoil")
+    while True:
+        light,soil=readSerial()
+        print("\t",light,|"\t",soil)
+    
        
