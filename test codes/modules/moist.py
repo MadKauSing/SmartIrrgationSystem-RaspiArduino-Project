@@ -8,7 +8,7 @@ class MoistureSensor():
         self.GPIO_PIN=GPIO_PIN;
         self.sensor=Adafruit_DHT.DHT11
     def get(self):
-        humidity,temperature=Adafruit_DHT.read_entry(self.sensor,self.GPIO_PIN);
+        humidity,temperature=Adafruit_DHT.read_retry(self.sensor,self.GPIO_PIN);
         return humidity,temperature;
 
 
@@ -17,10 +17,9 @@ class MoistureSensor():
 
 
 
-if __name__="__main__":
+if __name__=="__main__":
     sensor=MoistureSensor(17)
     while True:
-    
         humidity, temperature = sensor.get();
         if humidity is not None and temperature is not None:
             print('Temp={0:0.1f}*C  Humidity={1:0.1f}%'.format(temperature, humidity))
