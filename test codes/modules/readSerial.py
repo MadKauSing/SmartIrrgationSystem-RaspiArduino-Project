@@ -28,7 +28,8 @@ def readSerial():
             if x=="L:" and flag==1:
                 ans=[value]+ans
                 flag=0
-    return ans
+    light,soil=ans
+    return light,soil
             
 if __name__ == '__main__':
     print("\tlight","\tsoil")
