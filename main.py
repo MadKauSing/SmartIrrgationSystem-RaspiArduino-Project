@@ -19,7 +19,8 @@ while True:
     height=ultraSensor.distance()
     
     dataDump.writeValues(temperature,soilmoisture,humidity,light,height)
-    time.sleep(1);
+    ##600 secs
+    time.sleep(600);
     print("check")
     ##anyone who is editing this code run and see if values are appending to csv file
     ##to reset csv run dataDumpInit.py
