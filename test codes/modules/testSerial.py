@@ -10,5 +10,6 @@ def readSerial():
 
 
 if __name__ == '__main__':
-    readSerial()
+    while True:
+        readSerial()
 
