@@ -20,3 +20,9 @@ while True:
     
     dataDump.writeValues(temperature,soilmoisture,humidity,light,height)
     time.sleep(1000);
+    
+    ##anyone who is editing this code run and see if values are appending to csv file
+    ##to reset csv run dataDumpInit.py
+    
+    
+    
