@@ -1,4 +1,4 @@
-from torch import R
+
 import serial
 
 def readSerial():
