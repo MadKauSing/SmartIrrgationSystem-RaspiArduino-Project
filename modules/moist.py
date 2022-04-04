@@ -8,7 +8,7 @@ class MoistureSensor():
         self.GPIO_PIN=GPIO_PIN;
         self.sensor=Adafruit_DHT.DHT11
     def get(self):
-        humidity,temperature=Adafruit_DHT.read_entry(self.sensor,self.GPIO_PIN);
+        humidity,temperature=Adafruit_DHT.read_retry(self.sensor,self.GPIO_PIN);
         return humidity,temperature;
 
 
