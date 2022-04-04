@@ -15,7 +15,7 @@ while True:
     moistureSensor=moist.MoistureSensor(17);
     ultraSensor=ultrasonic_distance.UltrasonicSensor(18,14)
     
-    #humidity,temperature=moistureSensor.get()
+    humidity,temperature=moistureSensor.get()
     height=ultraSensor.distance()
     
     dataDump.writeValues(11,soilmoisture,12,light,height)
