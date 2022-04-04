@@ -18,9 +18,9 @@ while True:
     humidity,temperature=moistureSensor.get()
     height=ultraSensor.distance()
     
-    dataDump.writeValues(temperature,soilmoisture,humidity,light,height)
+    dataDump.writeValues(11,soilmoisture,12,light,height)
     time.sleep(1000);
-    
+    print("check")
     ##anyone who is editing this code run and see if values are appending to csv file
     ##to reset csv run dataDumpInit.py
     
