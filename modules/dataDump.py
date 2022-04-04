@@ -13,3 +13,4 @@ def writeValues(temperature,moisture,humidity,light,height):
         row=[current_time,temperature,moisture,humidity,light,height]
         print(row)
         csvwriter.writerow(row)
+        csvfile.close()
