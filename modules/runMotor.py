@@ -8,17 +8,22 @@ def setup(RelayPin):
     GPIO.setup(RelayPin, GPIO.OUT)
     GPIO.output(RelayPin, GPIO.HIGH)
  
-def loop(time):
+def loop(duration):
     start=time.time()
     while True:
         end=time.time()
-        print(end-start)
-        print ('Relay Channel One is On')
-        GPIO.output(RelayPin, GPIO.LOW)
-        time.sleep(0.5)
-        print ('Relay Channel One is Off')
-        GPIO.output(RelayPin, GPIO.HIGH)
-        time.sleep(0.5)
+        
+        if end-start >= duration:
+            print(type(end-start));
+            return end-start
+        else:
+            print(end-start)
+            #print ('Relay Channel One is On')
+            GPIO.output(RelayPin, GPIO.LOW)
+            time.sleep(0.2)
+            #print ('Relay Channel One is Off')
+            GPIO.output(RelayPin, GPIO.HIGH)
+            time.sleep(0.2)
  
 def destroy():
     GPIO.output(RelayPin, GPIO.HIGH)
