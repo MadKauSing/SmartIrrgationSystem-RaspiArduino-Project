@@ -4,7 +4,7 @@ import time
 #RelayPin = 40 # Set pin11 as Out
  
 def setup(RelayPin):
-    GPIO.setmode(GPIO.BOARD) # Set GPIO as numbering
+    GPIO.setmode(GPIO.BCM) # Set GPIO as numbering
     GPIO.setup(RelayPin, GPIO.OUT)
     GPIO.output(RelayPin, GPIO.HIGH)
  
@@ -30,7 +30,7 @@ def destroy():
     GPIO.cleanup()
  
 if __name__ == '__main__': # Program start from here
-    RelayPin=40
+    RelayPin=21
     setup(RelayPin)
     try:
         loop(5)

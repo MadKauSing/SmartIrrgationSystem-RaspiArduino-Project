@@ -13,7 +13,7 @@ import time
 
 
 data_offset=0
-RelayPinMotor=40
+RelayPinMotor=21
 runMotor.setup(RelayPinMotor)
 motorThresh=350
 motorRun=5
