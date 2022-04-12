@@ -8,7 +8,7 @@ def setup(RelayPin):
     GPIO.setup(RelayPin, GPIO.OUT)
     GPIO.output(RelayPin, GPIO.HIGH)
  
-def loop(time):
+def loop(duration):
     start=time.time()
     while True:
         end=time.time()
