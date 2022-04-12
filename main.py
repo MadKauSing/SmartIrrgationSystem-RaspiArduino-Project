@@ -4,7 +4,7 @@ sys.path.append('./modules/')
 import readSerial;
 import moist;
 import ultrasonic_distance;
-import dataDump;
+import dataDumpTest;
 
 import time
 
@@ -18,7 +18,7 @@ while True:
     humidity,temperature=moistureSensor.get()
     height=ultraSensor.distance()
     
-    dataDump.writeValues(temperature,soilmoisture,humidity,light,height)
+    dataDumpTest.writeValuesTest(temperature,soilmoisture,humidity,light,height)
     ##600 secs
     time.sleep(600);
     print("check")
