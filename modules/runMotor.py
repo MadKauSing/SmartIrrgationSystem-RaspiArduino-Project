@@ -14,6 +14,7 @@ def loop(duration):
         end=time.time()
         
         if end-start >= duration:
+            print(type(end-start));
             return end-start
         else:
             print(end-start)
