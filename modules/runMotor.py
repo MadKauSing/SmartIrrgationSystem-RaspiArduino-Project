@@ -14,15 +14,15 @@ def loop(duration):
         end=time.time()
         
         if end-start >= duration:
-            return
+            return end-start
         else:
             print(end-start)
             #print ('Relay Channel One is On')
             GPIO.output(RelayPin, GPIO.LOW)
-            time.sleep(0.5)
+            time.sleep(0.2)
             #print ('Relay Channel One is Off')
             GPIO.output(RelayPin, GPIO.HIGH)
-            time.sleep(0.5)
+            time.sleep(0.2)
  
 def destroy():
     GPIO.output(RelayPin, GPIO.HIGH)
