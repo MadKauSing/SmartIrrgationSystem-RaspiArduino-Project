@@ -13,10 +13,10 @@ def loop(duration):
     while True:
         end=time.time()
         print(end-start)
-        print ('Relay Channel One is On')
+        #print ('Relay Channel One is On')
         GPIO.output(RelayPin, GPIO.LOW)
         time.sleep(0.5)
-        print ('Relay Channel One is Off')
+        #print ('Relay Channel One is Off')
         GPIO.output(RelayPin, GPIO.HIGH)
         time.sleep(0.5)
  
