@@ -24,6 +24,12 @@ def func():
 	    
 		light,soilmoisture=readSerial.readSerial()
 
+		data_offset=0
+		RelayPinMotor=21
+		runMotor.setup(RelayPinMotor)
+		motorThresh=350
+		motorRun=5
+
 		moistureSensor=moist.MoistureSensor(17)
 		ultraSensor=ultrasonic_distance.UltrasonicSensor(18,14)
 	    
@@ -48,5 +54,3 @@ try:
 except:
 	print("Error")
 	func()
-    
-    

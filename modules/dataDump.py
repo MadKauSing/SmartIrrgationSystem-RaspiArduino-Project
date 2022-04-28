@@ -4,7 +4,7 @@ import datetime
 #fields = ["Date/Time", "temperature", "Moisture", "Humidity", "Light", "Height"]
 
 def writeValues(temperature,moisture,humidity,light,height):
-    file="./PlantData.csv"
+    file="../PlantData.csv"
 
     with open(file, "a") as csvfile:
         csvwriter = csv.writer(csvfile)
@@ -13,4 +13,3 @@ def writeValues(temperature,moisture,humidity,light,height):
         row=[current_time,temperature,moisture,humidity,light,int(height)]
         print(row)
         csvwriter.writerow(row)
-        #csvfile.close()
